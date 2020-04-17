@@ -1,5 +1,4 @@
-Imports Microsoft.VisualBasic
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.Windows.Forms
 Imports DevExpress.Office.Utils
 Imports DevExpress.XtraRichEdit.API.Native
@@ -7,6 +6,7 @@ Imports DevExpress.XtraRichEdit.API.Native
 Namespace RichEditTableCellFixedSize
 	Partial Public Class Form1
 		Inherits Form
+
 		Public Sub New()
 			InitializeComponent()
 
@@ -20,10 +20,10 @@ Namespace RichEditTableCellFixedSize
 			table.TableLayout = TableLayoutType.Fixed
 
 			table.PreferredWidthType = WidthType.Fixed
-			table.PreferredWidth = Units.InchesToDocumentsF(3f)
+			table.PreferredWidth = Units.InchesToDocumentsF(3F)
 
 			table.Rows(1).HeightType = HeightType.Exact
-			table.Rows(1).Height = Units.InchesToDocumentsF(0.25f)
+			table.Rows(1).Height = Units.InchesToDocumentsF(0.25F)
 
 			' Additional adjustments
 			richEditControl1.Document.InsertText(table(1, 1).Range.Start, "Fixed Cell")
