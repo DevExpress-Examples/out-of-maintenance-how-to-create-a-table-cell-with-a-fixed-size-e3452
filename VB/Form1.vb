@@ -14,7 +14,7 @@ Namespace RichEditTableCellFixedSize
 		End Sub
 
 		Private Sub GenerateSampleTable()
-			Dim table As Table = richEditControl1.Document.Tables.Add(richEditControl1.Document.CaretPosition, 3, 3)
+			Dim table As Table = richEditControl1.Document.Tables.Create(richEditControl1.Document.CaretPosition, 3, 3)
 
 			' Major adjustments
 			table.TableLayout = TableLayoutType.Fixed

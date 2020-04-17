@@ -12,7 +12,7 @@ namespace RichEditTableCellFixedSize {
         }
 
         private void GenerateSampleTable() {
-            Table table = richEditControl1.Document.Tables.Add(richEditControl1.Document.CaretPosition, 3, 3);
+            Table table = richEditControl1.Document.Tables.Create(richEditControl1.Document.CaretPosition, 3, 3);
 
             // Major adjustments
             table.TableLayout = TableLayoutType.Fixed;
